@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap");
+
+/* 
+    Don't Forget To Change Color And Put A
+        Color To Selection And Scroll
+*/
+
+:root {
+  --header-height: 3rem;
+
+  --hue: 259;
+  /*========== Colors ==========*/
+  --main-color: hsl(var(--hue), 45%, 17%);
+  --fir-color: hsl(var(--hue), 24%, 60%);
+  --sec-color: rgb(211, 79, 79);
+  --thi-color: rgb(67, 91, 175);
+  --fou-color: rgb(255, 160, 122);
+  --fiv-color: rgb(36, 163, 138);
+  --six-color: hsl(var(--hue), 71%, 62%);
+  --sev-color: #19728d;
+  --sel-color: hsl(var(--hue), 50%, 81%);
+  --selBg-color: hsl(var(--hue), 78%, 57%);
+
+  --whi-color: #fff;
+  --gray-color: #6c757d;
+  --container-color: #251634;
+
+  --title-color: hsl(var(--hue), 13%, 68%);
+  --text-color: hsl(var(--hue), 8%, 23%);
+  --text-color-light: hsl(var(--hue), 8%, 65%);
+  --input-color: hsl(var(--hue), 60%, 30%);
+
+  --facebook-bg: #00428e;
+  --twitter-bg: #008a93;
+  --github-bg: #2e3536;
+
+  /*========== Transition Time ==========*/
+  --main-tra: .3s linear;
+  --sec-tra: 0.5s ease-in-out;
+  --active-tra: 0.98s ease-in-out;
+
+  /*========== Font and typography ==========*/
+  --main-font: 'Poppins', sans-serif;
+  --arab-font: 'Noto Sans Arabic', sans-serif;
+  --fir-font: 'Sora', sans-serif;
+  --sec-font: 'Rajdhani', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --huge-size: 5.5rem;
+  --biggest-size: 3.5rem;
+  --bigger-size: 2.5rem;
+  --big-size: 2rem;
+  --h1-size: 1.5rem;
+  --h2-size: 1.25rem;
+  --h3-size: 1.125rem;
+  --normal-size: 0.938rem;
+  --small-size: 0.813rem;
+  --smaller-size: 0.75rem;
+  --smallest-size: 0.6rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi: 600;
+  --font-bold: 800;
+
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --huge-size: 5.5rem;
+    --biggest-size: 4rem;
+    --bigger-size: 3rem;
+    --big-size: 2.5rem;
+    --h1-size: 2.25rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+    --normal-size: 1rem;
+    --small-size: 0.875rem;
+    --smaller-size: 0.813rem;
+  }
+}
+
+/* Color Codes */
+:root {
+  --color01: #131521;
+  --color02: #141720;
+
+  --color03: #ffd104;
+
+  --color04: #457174;
+  --color05: #0b94cb;
+  --color06: #1eb1da;
+  --color07: #2b45fc;
+
+  --color08: #34113d;
+  --color08-li: #b6416d;
+  
+  --color09: #971d44;
+  --color10: rgb(255, 102, 102);
+}
+/* --------------- */
+
+/* ======================= */
+/* ======================= */
+
+/*
+   * Scroll color
+   */
+
+body::-webkit-scrollbar {
+  width: 9px;
+  background-color: var(--main-color); /*color*/
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fir-color); /*color*/
+}
+
+/*
+ * Selection color
+ */
+ ::-moz-selection {
+  background-color: var(--selBg-color); /*color*/
+  color: var(--sel-color); /*color*/
+}
+
+::selection {
+  background-color: var(--selBg-color); /*color*/
+  color: var(--sel-color); /*color*/
+}
+
+/* ======================= */
+/*==================== BASE ====================*/
+/* ======================= */
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: var(--normal-size);
+}
+
+h1,h2,h3,h4,p,a {
+  letter-spacing: 1.2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* display option [classes] */
+.show {
+  display: inherit !important;
+}
+.hide {
+  display: none !important;
+}
+/* opacity option [classes] */
+.dis {
+  opacity: 0;
+}
+.non-dis {
+  opacity: 1;
+}
+.finish {
+  text-decoration: line-through 3px solid ;
+  text-decoration-color: var(--whi-color);
+  color: var(--fou-color) !important;
+}
+/* 
+    if you want to change it
+    when screen width change
+*/
+/* @media (min-width: 767px) {
+  .hide {
+    display: inherit !important;
+  }
+} */
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section-title {
+  font-size: var(--h1-size);
+  color: var(--title-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--small-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--main-color);
+}
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  position: fixed;
+  bottom: 50%;
+  left: 0%;
+  width: 80%;
+  background-color: var(--fir-color);
+  padding: 2rem 1.5rem 4rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: var(--main-tra);
+}
+
+.nav-list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.nav-item {
+  letter-spacing: 0.5rem;
+}
+
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  letter-spacing: 1.5px;
+  transition: var(--main-tra);
+  border: 2px solid var(--fir-color);
+}
+
+.button:hover {
+  box-shadow: inset 0 0 0 2.5em var(--whi-color);
+}
+
+.button-icon {
+  font-size: 1.3rem;
+  margin-left: var(--mb-0-5);
+  transition: var(--main-tra);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button-small {
+  padding: .75rem 1rem;
+  border: none;
+}
+
+.button-link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--fir-color);
+}
+
+.button-white {
+  background-color: #fff;
+  color: var(--fir-color);
+  transition: var(--main-tra);
+  border: 2px solid var(--fir-color);
+  padding: .5rem;
+}
+
+.button-white:hover {
+  /* background-color: #fff; */
+  color: #fff;
+  box-shadow: inset 0 0 0 2.5em var(--fir-color);
+}
+
+.button-link:hover {
+  background-color: transparent;
+  color: var(--fir-color-alt);
+}
+
+.button-contact:hover .button-icon,
+.button:hover .button-icon {
+  transform: translateX(0.25rem);
+}
+
+.button-down {
+  transition: var(--main-tra);
+}
+
+.button-down:hover {
+  transform: scale(1.06);
+}
+
+.button-social {
+  font-size: 1.6rem;
+  margin-right: var(--mb-1-5);
+  border: 2px solid var(--main-color);
+  border-radius: 25px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  transition: var(--main-tra);
+  padding: 5px;
+}
+
+.button-social:hover {
+  border-radius: 5px;
+  transform: scale(1.2);
+}

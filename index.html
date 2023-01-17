@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- =================== -->
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="To-Do List Website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website Name -->
+    <title>To-Do || Website</title>
+
+    <!-- CSS Files
+    ==================== -->
+    <!-- Bootstrap & FontAwesome CSS -->
+    <!-- <link rel="stylesheet" href="res/css/vendor/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="res/css/vendor/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="res/css/main.css" />
+    <link rel="stylesheet" href="res/css/style.css" />
+
+    <!-- =================== -->
+  </head>
+  <body>
+    <!-- =================== -->
+    <!-- Main Section -->
+    <div class="container">
+      <div class="head">
+        <h2>Hexa <span class="other">Team</span></h2>
+      </div>
+
+      <section id="section">
+        <div class="task">
+          <span class="fa fa-star icon"></span>
+          <p class="headTitle">Task 1</p>
+          <div class="icons">
+            <span class="fa fa-trash icon"></span>
+            <span class="fa fa-angry icon"></span>
+          </div>
+          <div class="textTask hide">
+            <p class="text">Task 1</p>
+          </div>
+        </div>
+
+        <div class="task">
+          <span class="fa fa-star icon"></span>
+          <p class="headTitle">Task 2</p>
+          <div class="icons">
+            <span class="fa fa-trash icon"></span>
+            <span class="fa fa-angry icon"></span>
+          </div>
+          <div class="textTask hide">
+            <p class="text">Task 2</p>
+          </div>
+        </div>
+      </section>
+
+      <form class="newTask">
+        <h2>Write Your Task</h2>
+        <input
+          type="text"
+          class="taskHead"
+          name="newTask"
+          placeholder="Write Your Task Head"
+        />
+        <textarea
+          class="taskContent"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Write Your Task Text"
+        ></textarea>
+        <button class="button"><i class="fa fa-arrow-right"></i></button>
+        <!-- <button class="button edit hide" type="button">Edit <i class="fa fa-arrow-right"></i></button> -->
+      </form>
+    </div>
+
+    <!-- JS Files
+    ==================== -->
+    <!-- jQuery JS -->
+    <script src="res/js/vendor/jquery-3.6.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="res/js/vendor/popper.min.js"></script>
+    <!-- <script src="res/js/vendor/bootstrap.min.js"></script> -->
+
+    <!-- Main JS -->
+    <script src="res/js/script.js"></script>
+    <!-- =================== -->
+  </body>
+</html>
